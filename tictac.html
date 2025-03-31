@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TICTAC</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Lobster", cursive;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .container {
+        height: 350px;
+        width: 350px;
+        border: 25px solid rgb(92, 40, 40);
+        margin: 0 auto;
+        background-color: rgb(158, 134, 72);
+      }
+
+      #grid {
+        height: 306px;
+        width: 306px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 15px auto;
+      }
+
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 1px solid rgb(1, 43, 23);
+        font-size: 2.5rem;
+        text-align: center;
+      }
+
+      .button {
+        background-color: transparent;
+        z-index: 1;
+        padding: 15px;
+        font-size: 24px;
+      }
+
+      .button:hover {
+        border: 2px dotted black;
+        border-radius: 10px;
+      }
+
+      h3,
+      h2 {
+        color: rgb(13, 46, 35);
+        text-align: center;
+      }
+      #turn {
+        height: 40px;
+        width: 60px;
+        background-color: rgb(15, 15, 15);
+        color: aliceblue;
+        position: relative;
+        left: 60%;
+        visibility: hidden;
+      }
+      #newbox{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #computer , #other{
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+      #computer:hover , #other:hover{
+        padding: 5px;
+        border-radius: 10px;
+        background-color: #9cf8bb;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Tic tac game</h1>
+    
+    <h3 id="result"></h3>
+    <div id="turn">x's turn</div>
+
+    <div id="newbox">
+      <h2>Choose Your Mode</h2>
+      <div id="computer">Play Against Computer</div>
+      <div id="other">Play Against Another Player</div>
+  </div>
+  
+
+    <div class="container">
+      <div id="grid">
+        <div class="box" id="1"></div>
+        <div class="box" id="2"></div>
+        <div class="box" id="3"></div>
+        <div class="box" id="4"></div>
+        <div class="box" id="5"></div>
+        <div class="box" id="6"></div>
+        <div class="box" id="7"></div>
+        <div class="box" id="8"></div>
+        <div class="box" id="9"></div>
+      </div>
+    </div>
+    <script src="tictac.js"></script>
+  </body>
+</html>
